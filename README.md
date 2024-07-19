@@ -24,14 +24,14 @@ Interactive API documentation is available via Swagger UI at /swagger/.
 # User Registration
 Endpoint: POST /api/register/
 Description: Register a new user.
+
 Request Body:
-1. first_name: User's first name
-2. last_name: User's last name
-3. email: User's email
-4. phone_number: User's phone number
-5. address: User's address
-Responses:
-201 Created: User registration successful.
+first_name: User's first name
+last_name: User's last name
+email: User's email
+phone_number: User's phone number
+address: User's address
+
    
 # Login
 Endpoint: POST /api/token/
@@ -39,8 +39,7 @@ Description: Log in an existing user.
 Request Body:
 email: User's email
 password: User's password
-Responses:
-200 OK: Authentication token.
+
 
 # Bus Search
 Endpoint: GET /api/bus-service/search/
@@ -49,8 +48,7 @@ Parameters:
 source: Source location (query parameter)
 destination: Destination location (query parameter)
 date: Date of journey (query parameter)
-Responses:
-200 OK: List of available buses.
+
 
 # Block Seat
 Endpoint: POST /api/bus-service/block-seat/
@@ -59,40 +57,35 @@ Request Body:
 bus: ID of the bus (foreign key)
 seat_number: Number of the seat
 pickup_point: Pickup location
-Responses:
-201 Created: Confirmation with blocking ID.
+
 
 # Book Ticket
 Endpoint: POST /api/bus-service/book-ticket/
 Description: Book tickets based on a blocked seat ID.
 Request Body:
 blocked_seat: ID of the blocked seat (foreign key)
-Responses:
-201 Created: Confirmation with booking ID.
+
 
 # Bus Ticket Booking Portal API
 # Search History
 Endpoint: GET /api/booking-portal/search-history/
 Description: Retrieve the history of all search queries made by the user.
-Responses:
-200 OK: List of search queries.
+
 
 # Block History
 Endpoint: GET /api/booking-portal/block-history/
 Description: Retrieve the history of all seat blockings made by the user.
-Responses:
-200 OK: List of seat blockings.
+
 
 # Booking History
 Endpoint: GET /api/booking-portal/booking-history/
 Description: Retrieve the history of all bookings made by the user.
-Responses:
-200 OK: List of bookings.
+
 
 # Setup and Installation
 # Clone the Repository:
-1. git clone <repository-url>
-2. cd <repository-directory>
+1. git clone https://github.com/rswarn01/ticket_booking
+2. cd bus_ticket_system
 
 # Install Dependencies:
 pip install -r requirements.txt

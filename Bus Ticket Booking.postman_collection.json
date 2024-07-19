@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "fa7a809b-c60d-4cf6-bfcb-b54b68d73144",
+		"name": "Bus Ticket Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19188117",
+		"_collection_link": "https://bold-resonance-706397.postman.co/workspace/Supplier-Prism~b7eae6e0-9b09-499c-9891-d95dd8aaab77/collection/19188117-fa7a809b-c60d-4cf6-bfcb-b54b68d73144?action=share&source=collection_link&creator=19188117"
+	},
+	"item": [
+		{
+			"name": "user registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"newuser\",\r\n  \"email\": \"newuser@example.com\",\r\n  \"phone_number\": \"1234567890\",\r\n  \"address\": \"123 Main St, Anytown\",\r\n  \"password\": \"securepassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"newuser\",\r\n  \"password\": \"securepassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Buses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEzNDkzLCJpYXQiOjE3MjE0MTMxOTMsImp0aSI6ImQ5YTQ5NGU0NjU5YzQ3NjhiNTlhNTU1MjBhZGVkYzdhIiwidXNlcl9pZCI6Mn0.LkuRHs1xfpCczuLJe6EN7l_s_V_VZQw2A2e-ReWLzTc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDExNTcyLCJpYXQiOjE3MjE0MTEyNzIsImp0aSI6ImVmM2ZlNjFkMmJkZTRhMWVhYzkzNTk4ODI3NjYxMGVhIiwidXNlcl9pZCI6Mn0.lQa88llSKO7UxPGYm4gz1fNAfpzK1nv7Te_NgUzbwOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bus-service/search/?source=Jaipur&destination=Delhi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bus-service",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Jaipur"
+						},
+						{
+							"key": "destination",
+							"value": "Delhi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block Seat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEzODI2LCJpYXQiOjE3MjE0MTM1MjYsImp0aSI6IjQ3NzJiOTMwYjE2MTRmNmU4ZjM2MTNmZTE1YzNlYTkwIiwidXNlcl9pZCI6Mn0.JSLIW0v18Yw2c-rct9Q3FPJLdJPEMIO76VQt-edl5Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEyMjE3LCJpYXQiOjE3MjE0MTE5MTcsImp0aSI6IjgwZGQ0ODY0NTFkYjQ2YzY4N2ExNzk3OWZmMDIwNzhmIiwidXNlcl9pZCI6Mn0.XFZFY8h85QLMjJ4X0EEcgj3TFYYDgJGIYOQmqvDI_kc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bus\": 1,\r\n  \"seat_number\": 10,\r\n  \"pickup_point\": \"Jodhpur\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bus-service/block-seat/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bus-service",
+						"block-seat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDE0MTYzLCJpYXQiOjE3MjE0MTM4NjMsImp0aSI6ImY2MGE5NWVmNzc5NzRmZTI5NjZjYjVjNjA1MWM3Nzc3IiwidXNlcl9pZCI6Mn0.dNYWd3z9-C99-yfd3YGeYxz55svLDPLnzI8ZxmNQHmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDExNTcyLCJpYXQiOjE3MjE0MTEyNzIsImp0aSI6ImVmM2ZlNjFkMmJkZTRhMWVhYzkzNTk4ODI3NjYxMGVhIiwidXNlcl9pZCI6Mn0.lQa88llSKO7UxPGYm4gz1fNAfpzK1nv7Te_NgUzbwOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"blocked_seat\": 8\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bus-service/book-ticket/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bus-service",
+						"book-ticket",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEzNDkzLCJpYXQiOjE3MjE0MTMxOTMsImp0aSI6ImQ5YTQ5NGU0NjU5YzQ3NjhiNTlhNTU1MjBhZGVkYzdhIiwidXNlcl9pZCI6Mn0.LkuRHs1xfpCczuLJe6EN7l_s_V_VZQw2A2e-ReWLzTc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDExMjk0LCJpYXQiOjE3MjE0MTA5OTQsImp0aSI6IjZmYTMyNGI2YzBiNjQwMmI5YTJlMzcxN2I3NDJmOWM0IiwidXNlcl9pZCI6Mn0.ANLsXpBaiakDcHtyUmsipKiExkTUAJXGmaw6jWOtPqk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/booking-portal/search-history/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking-portal",
+						"search-history",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Block history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEzODI2LCJpYXQiOjE3MjE0MTM1MjYsImp0aSI6IjQ3NzJiOTMwYjE2MTRmNmU4ZjM2MTNmZTE1YzNlYTkwIiwidXNlcl9pZCI6Mn0.JSLIW0v18Yw2c-rct9Q3FPJLdJPEMIO76VQt-edl5Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEyMDU4LCJpYXQiOjE3MjE0MTE3NTgsImp0aSI6IjMxNDkzYjA3ZjliNzQ2YmFhYmUxNGJiZGM1OGFiOGY1IiwidXNlcl9pZCI6Mn0.XkMhpUWAe3e-Px_wsQF5HUejEuOWgmMjmt3Nq0Z3Hj0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/booking-portal/block-history/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking-portal",
+						"block-history",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDE0MTYzLCJpYXQiOjE3MjE0MTM4NjMsImp0aSI6ImY2MGE5NWVmNzc5NzRmZTI5NjZjYjVjNjA1MWM3Nzc3IiwidXNlcl9pZCI6Mn0.dNYWd3z9-C99-yfd3YGeYxz55svLDPLnzI8ZxmNQHmU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDEyMDU4LCJpYXQiOjE3MjE0MTE3NTgsImp0aSI6IjMxNDkzYjA3ZjliNzQ2YmFhYmUxNGJiZGM1OGFiOGY1IiwidXNlcl9pZCI6Mn0.XkMhpUWAe3e-Px_wsQF5HUejEuOWgmMjmt3Nq0Z3Hj0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/booking-portal/booking-history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking-portal",
+						"booking-history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

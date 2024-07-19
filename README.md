@@ -21,7 +21,7 @@ Interactive API documentation is available via Swagger UI at /swagger/.
 
 # API Endpoints
 **Bus Ticket Service Provider API**
-1. User Registration
+**User Registration**
 Endpoint: POST /api/register/
 Description: Register a new user.
 Request Body:

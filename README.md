@@ -21,7 +21,7 @@ Interactive API documentation is available via Swagger UI at /swagger/.
 # API Endpoints
 **Bus Ticket Service Provider API**
 
-**User Registration**
+# User Registration
 Endpoint: POST /api/register/
 Description: Register a new user.
 Request Body:
@@ -33,7 +33,7 @@ Request Body:
 Responses:
 201 Created: User registration successful.
    
-**Login**
+# Login
 Endpoint: POST /api/token/
 Description: Log in an existing user.
 Request Body:
@@ -42,7 +42,7 @@ password: User's password
 Responses:
 200 OK: Authentication token.
 
-**Bus Search**
+# Bus Search
 Endpoint: GET /api/bus-service/search/
 Description: Search for buses based on source, destination, and date of journey.
 Parameters:
@@ -52,7 +52,7 @@ date: Date of journey (query parameter)
 Responses:
 200 OK: List of available buses.
 
-**Block Seat**
+# Block Seat
 Endpoint: POST /api/bus-service/block-seat/
 Description: Block seats on a bus.
 Request Body:
@@ -62,7 +62,7 @@ pickup_point: Pickup location
 Responses:
 201 Created: Confirmation with blocking ID.
 
-**Book Ticket**
+# Book Ticket
 Endpoint: POST /api/bus-service/book-ticket/
 Description: Book tickets based on a blocked seat ID.
 Request Body:
@@ -71,36 +71,36 @@ Responses:
 201 Created: Confirmation with booking ID.
 
 # Bus Ticket Booking Portal API
-**Search History**
+# Search History
 Endpoint: GET /api/booking-portal/search-history/
 Description: Retrieve the history of all search queries made by the user.
 Responses:
 200 OK: List of search queries.
 
-**Block History**
+# Block History
 Endpoint: GET /api/booking-portal/block-history/
 Description: Retrieve the history of all seat blockings made by the user.
 Responses:
 200 OK: List of seat blockings.
 
-**Booking History**
+# Booking History
 Endpoint: GET /api/booking-portal/booking-history/
 Description: Retrieve the history of all bookings made by the user.
 Responses:
 200 OK: List of bookings.
 
 # Setup and Installation
-**Clone the Repository:**
+# Clone the Repository:
 1. git clone <repository-url>
 2. cd <repository-directory>
 
-**Install Dependencies:**
+# Install Dependencies:
 pip install -r requirements.txt
 
-**Apply Migrations:**
+# Apply Migrations:
 python manage.py migrate
 
-**Run the Development Server:**
+# Run the Development Server:
 python manage.py runserver
 
 # Access the API Documentation:

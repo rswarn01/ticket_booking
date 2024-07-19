@@ -1,5 +1,3 @@
-# ticket_booking
-
 # Bus Ticket Booking System
 # Project Overview
 The Bus Ticket Booking System is a web application that allows users to search for buses, block seats, and book tickets. It consists of two primary components: the Bus Ticket Service Provider API and the Bus Ticket Booking Portal API. The system is built using Django REST Framework and includes interactive Swagger documentation for easy exploration of API endpoints.
@@ -21,6 +19,7 @@ Interactive API documentation is available via Swagger UI at /swagger/.
 
 # API Endpoints
 **Bus Ticket Service Provider API**
+
 **User Registration**
 Endpoint: POST /api/register/
 Description: Register a new user.

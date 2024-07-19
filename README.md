@@ -93,6 +93,9 @@ pip install -r requirements.txt
 # Apply Migrations:
 python manage.py migrate
 
+# Populate seed data (created custom command and file)
+python manage.py seed_data
+
 # Run the Development Server:
 python manage.py runserver
 

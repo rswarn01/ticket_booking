@@ -3,16 +3,17 @@
 The Bus Ticket Booking System is a web application that allows users to search for buses, block seats, and book tickets. It consists of two primary components: the Bus Ticket Service Provider API and the Bus Ticket Booking Portal API. The system is built using Django REST Framework and includes interactive Swagger documentation for easy exploration of API endpoints.
 
 **Features**
-1. Bus Ticket Service Provider
-2. Bus Search: Search for buses based on source, destination, and date of journey.
-3. Block Seats: Block seats on a bus for a specified pickup point.
-4. Book Tickets: Book tickets based on a blocked seat ID.
-5. Bus Ticket Booking Portal
-6. User Registration: Register new users.
-7. User Login: Authenticate users to access the system.
-8. Search History: Maintain a history of all search queries.
-9. Blocking History: Maintain a history of all seat blockings.
-10. Booking History: Maintain a history of all bookings.
+# Bus Ticket Service Provider
+1. Bus Search: Search for buses based on source, destination, and date of journey.
+2. Block Seats: Block seats on a bus for a specified pickup point.
+3. Book Tickets: Book tickets based on a blocked seat ID.
+   
+# Bus Ticket Booking Portal
+1. User Registration: Register new users.
+2. User Login: Authenticate users to access the system.
+3. Search History: Maintain a history of all search queries.
+4. Blocking History: Maintain a history of all seat blockings.
+5. Booking History: Maintain a history of all bookings.
     
 **API Documentation**
 Interactive API documentation is available via Swagger UI at /swagger/.
